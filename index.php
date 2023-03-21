@@ -1,9 +1,6 @@
 <?php
 
-var_dump($_GET);
-
 $filter_parking = isset($_GET['parking']) ? true : false;
-var_dump($filter_parking);
 
 $hotels = [
   [
@@ -51,7 +48,7 @@ $hotels = [
  }
  if ($filter_parking === true) {
    $hotels = array_filter($hotels, 'hasParking');
-   $hotels = array_filter($hotels, fn($hotel) => $hotel['parking']); / versione con arrow function
+   $hotels = array_filter($hotels, fn($hotel) => $hotel['parking']); // versione con arrow function
  }
 
 $filtered_hotels = [];
