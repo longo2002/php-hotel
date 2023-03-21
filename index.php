@@ -146,22 +146,6 @@ if ($filter_parking === true) {
       </table>
     </div>
   </section>
- <ul>
-    <?php
-    foreach ($hotels as $hotel) :
-    ?>
-      <li>
-        <h2><?php echo $hotel['name']; ?></h2>
-        <p><?= $hotel['description']; ?></p>
-        <p>Parcheggio: <?= $hotel['parking'] === true ? 'Si' : 'No'; ?></p>
-        <p> <?= $hotel['vote']; ?>/5</p>
-        <p><?= $hotel['distance_to_center']; ?> km</p>
-      </li>
-    <?php
-    endforeach;
-    ?>
-  </ul>
-
 </body>
 
 </html>
